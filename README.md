@@ -1,15 +1,15 @@
-# calendar
-# just testing how to add, view, and delete events
+    calendar
+    just testing how to add, view, and delete events
 
-events = {}  # date: list of events
+    events = {}  # date: list of events
 
-def add_event(date, title):
+    def add_event(date, title):
     if date not in events:
         events[date] = []
     events[date].append(title)
     print(f"Added event '{title}' to {date}")
 
-def view_events(date):
+    def view_events(date):
     if date in events:
         print(f"Events on {date}:")
         for i, e in enumerate(events[date]):
@@ -17,16 +17,18 @@ def view_events(date):
     else:
         print("No events on this date.")
 
-def delete_event(date, index):
+     def delete_event(date, index):
     try:
         removed = events[date].pop(index - 1)
         print(f"Deleted '{removed}' from {date}")
-        if not events[date]:
-            del events[date]  # remove date key if no events left
-    except:
-        print("Something went wrong... maybe invalid index?")
-
-while True:
+         if not events[date]:
+         
+     del events[date]  # remove date key if no events left
+   
+    except
+         print("Something went wrong... maybe invalid index?")
+         
+     while True:
     print("\n--- Calendar Menu ---")
     print("1. Add event")
     print("2. View events")
