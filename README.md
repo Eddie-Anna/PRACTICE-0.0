@@ -1,4 +1,4 @@
-    calendar
+#calendar
     just testing how to add, view, and delete events
 
     events = {}  # date: list of events
